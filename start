@@ -1,0 +1,24 @@
+#!/bin/sh
+
+TOTAL_INSTALL_AMOUNT=4
+
+echo "Starting install proccess"
+sudo apt update && sudo apt upgrade -y
+
+echo "[1/$TOTAL_INSTALL_AMOUNT] Installing git"
+sudo apt install git
+
+echo "[2/$TOTAL_INSTALL_AMOUNT] Installing Allacrity"
+sudo apt install alacritty -y
+rm -rf /home/$USER/.config/alacritty
+ln -s /home/$USER/.config/dotfiles/alacritty /home/$USER/.config/alacritty
+
+echo "[3/$TOTAL_INSTALL_AMOUNT] Installing Neovim..."
+sudo apt install neovim -y
+rm -rf /home/$USER/.config/nvim
+ln -s /home/$USER/.config/dotfiles/nvim /home/$USER/.config/nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim /home/$USER/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+echo "[4/$TOTAL_INSTALL_AMOUNT] Updating bashrc..."
+rm /home/$USER/.bashrc
+ln -s /home/$USER/.config/dotfiles/bashrc /home/$USER/.bashrc

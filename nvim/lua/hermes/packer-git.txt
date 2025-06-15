@@ -1,0 +1,12 @@
+First download packer using this command:
+
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+Then use:
+
+:so
+:PackerSync => Syncs everything
+
+Then download "fonts-firacode" to be able to see cool icons
+
+Be happy, I suppose.

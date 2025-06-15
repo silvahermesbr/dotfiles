@@ -1,0 +1,63 @@
+# Alacritty Configuration File
+# Location: ~/.config/alacritty/alacritty.yml
+
+# Window configuration
+window:
+  # Padding creates space between the window border and the text.
+  padding:
+    x: 10
+    y: 10
+
+  # Set the window transparency (opacity).
+  # A value of 1.0 is fully opaque, and 0.0 is fully transparent.
+  # 0.85 is a good starting point for a subtle effect.
+  opacity: 0.90
+
+# Font configuration
+font:
+  # Font family. 'JetBrains Mono' is a great free font for programming.
+  # If not installed, it will fall back to a generic 'monospace' font.
+  # You can install it with: sudo apt install fonts-jetbrains-mono
+  normal:
+    family: JetBrains Mono
+    style: Regular
+
+  bold:
+    family: JetBrains Mono
+    style: Bold
+
+  italic:
+    family: JetBrains Mono
+    style: Italic
+
+  size: 11.0
+
+# Gruvbox Dark Color Scheme
+colors:
+  # Default colors
+  primary:
+    background: '#282828'
+    foreground: '#ebdbb2'
+
+  # Normal colors
+  normal:
+    black:   '#282828'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
+
+  # Bright colors
+  bright:
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
+
